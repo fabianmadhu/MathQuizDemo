@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Playground.unity
+    guid: 418684d3c4b7a8b9bb1e350bc149f673
+  - enabled: 1
+    path: Assets/Scenes/Subtraction.unity
+    guid: 293d89a6f6a155479b121c2753640fc9
+  - enabled: 1
+    path: Assets/Scenes/Multiply.unity
+    guid: e769b84041de7cb5586687db69a85ff1
+  - enabled: 1
+    path: Assets/Scenes/Divide.unity
+    guid: b15fdceb7fb2f6c01af0a539559e1fc7
+  m_configObjects: {}
