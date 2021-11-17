@@ -1,1 +1,2 @@
-# SimpleMathDemo
+#  MathQuizDemo
+
