@@ -63,36 +63,23 @@ public class QuestionManager : MonoBehaviour
 
     void AssignChoiceValues()
     {
+        List<int> randQList = new List<int>();
         for (int i = 0; i < ansChoices.Count; i++)
         {
-            int rand;
             while (true)
             {
-                rand = Random.Range(0, 11);
-                if (rand == answer)
+                int randNum = Random.Range(0, 11);
+                if (randNum == answer || (randQList.Contains(randNum)))
                 {
                     continue;
                 }
-                else if (!IsThere(rand))
-                {
-                    ansChoices[i].GetComponentInChildren<Text>().text = rand.ToString();
-                    break;
-                }
-                continue;
+                randQList.Add(randNum);
+                ansChoices[i].GetComponentInChildren<Text>().text = randNum.ToString();
+                break;
             }
+
         }
-        ansChoices[Random.Range(0, ansChoices.Count)].GetComponentInChildren<Text>().text = answer.ToString();
-    }
-    bool IsThere(int num)
-    {
-        foreach (Button btn in ansChoices)
-        {
-            if (btn.GetComponentInChildren<Text>().text == num.ToString())
-            {
-                return true;
-            }
-        }
-        return false;
+        ansChoices[Random.Range(0, ansChoices.Count)].GetComponentInChildren<Text>().text = answer.ToString(); //assigns the correct answer randomly
     }
 
     void CheckAnswer(Button btn)
